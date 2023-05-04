@@ -1,47 +1,46 @@
 package se.kth.iv1350.integration;
 
-/**
- * Class Item represents a singular item within the sale.
- */
+// This class represents an item with its corresponding item description, item identifier, quantity and store quantity.
 public class Item {
-    private ItemDescription itemDescription; 
-    private int itemIdentifier; 
-    private double quantity; 
-    private double storeQuantity;
+    private ItemDescription itemDescription; // The description of the item.
+    private int itemIdentifier; // The unique identifier of the item.
+    private double quantity; // The quantity of the item.
+    private double storeQuantity; // The quantity of the item in the store.
 
-    /**
-     * Creates an instance of the Item Class 
-     * @param itemIdentifier The item identifier number entered when scannign items
-     * @param itemDescription The specific details of the entered item 
-     * @param quantity The quantity of items
-     */
+    // The constructor for the item.
     public Item(int itemIdentifier, ItemDescription itemDescription, double storeQuantity){
-        this.itemIdentifier = itemIdentifier; 
+        this.itemIdentifier = itemIdentifier;
         this.storeQuantity = storeQuantity;
         this.itemDescription = itemDescription;
-        quantity = 0;  
+        quantity = 0;  // The quantity is initialized to 0.
     }
 
+    // Getter method to get the item identifier.
     public int getItemIdentifier(){
-        return this.itemIdentifier; 
+        return this.itemIdentifier;
     }
 
+    // Getter method to get the quantity of the item.
     public double getQuantity(){
-        return quantity; 
+        return quantity;
     }
 
+    // Getter method to get the store quantity of the item.
     public double getStoreQuantity(){
         return this.storeQuantity;
     }
 
+    // Getter method to get the item description.
     public ItemDescription getItemDescription(){
-        return this.itemDescription; 
+        return this.itemDescription;
     }
 
+    // Setter method to set the quantity of the item.
     public void setQuantity(double newQuantity) {
         quantity = newQuantity;
-    } 
+    }
 
+    // Setter method to set the store quantity of the item.
     public void setStoreQuantity(double newStoreQuantity){
         this.storeQuantity = newStoreQuantity;
     }

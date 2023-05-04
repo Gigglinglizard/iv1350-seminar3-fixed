@@ -3,7 +3,7 @@ package se.kth.iv1350.integration;
 import java.util.*;
 import java.time.*;
 /**
- * SaleDTO, Sale data transfer object.
+  SaleDTO, Sale data transfer object.
  */
 public class SaleDTO {
     private java.time.LocalDateTime dateAndTime; 
@@ -13,11 +13,11 @@ public class SaleDTO {
     
 
     /**
-     * Creates an instance of SaleDTO.
-     * @param dateAndTime Current Date and Time of sale 
-     * @param runningTotal Price of sale before VAT and Discount
-     * @param addedVAT Holds the appropriate tax rate applied to the sale 
-     * @param items Holds all of the scanned items in the sale 
+      Creates an instance of SaleDTO.
+      @param dateAndTime Current Date and Time of sale 
+      @param runningTotal Price of sale before VAT and Discount
+      @param addedVAT Holds the appropriate tax rate applied to the sale 
+      @param items Holds all of the scanned items in the sale 
      */
     public SaleDTO (LocalDateTime dateAndTime, double runningTotal, double addedVAT, List<Item> items){
         this.dateAndTime = dateAndTime; 
@@ -27,24 +27,24 @@ public class SaleDTO {
     }
 
     /**
-     * Returns Date and Time of sale
-     * @return dateAndTime, returns the local time
+      Returns Date and Time of sale
+      @return dateAndTime, returns the local time
      */
     public java.time.LocalDateTime getDateAndTime(){
         return this.dateAndTime; 
     }
 
     /**
-     * Returns the total price before VAT and discount
-     * @return runningTotal 
+      Returns the total price before VAT and discount
+      @return runningTotal 
      */
     public double getRunningTotal(){
         return this.runningTotal; 
     }
 
     /**
-     * Returns VAT tax rate for the entire sale
-     * @return VAT 
+      Returns VAT tax rate for the entire sale
+      @return VAT 
      */
     public double getAddedVAT(){
         return this.addedVAT; 
