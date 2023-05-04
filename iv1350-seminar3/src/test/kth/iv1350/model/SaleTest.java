@@ -43,6 +43,7 @@ public class SaleTest {
     @Test
     public void testIsSameItem() {
         sale = new Sale();
+        boolean correctItem = false;
         item1 = new Item(2, itemDescription1, 500.0);
         item2 = new Item(4, itemDescription2, 250.0);
         itemDescription1 = new ItemDescription("Dragon Fruit", 40.0, 0.25);
@@ -52,9 +53,13 @@ public class SaleTest {
         sale.addItem(item2);
         List<Item> items = sale.getItems();
 
+        if (item1.getItemIdentifier() == (item2.getItemIdentifier())){
+            correctItem = true;
+        }
+
         assertEquals(2, items.size());
         assertTrue(items.contains(item2));
-        assertEquals(false, );
+        assertEquals(false, correctItem);
     }
 
     @Test
