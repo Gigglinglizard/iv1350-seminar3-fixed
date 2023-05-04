@@ -23,6 +23,9 @@ public class SaleTest {
     private String name;
     private double price;
     private double VAT;
+    private double addedVAT;
+    private double runningTotal;
+    private LocalDateTime dateAndTime;
     private SaleDTO testSale;
     private controller contr;
     private ExternalInventory extInv;
@@ -49,13 +52,14 @@ public class SaleTest {
     @Test
     public void calculateCost() {
         sale = new Sale();
-        item1 = new Item(2, itemDescription1, 500.0);
-        item2 = new Item(4, itemDescription2, 250.0);
         itemDescription1 = new ItemDescription("Dragon Fruit", 40.0, 0.25);
         itemDescription2 = new ItemDescription("Canned Beans", 55.0, 0.12);
-
+        item1 = new Item(2, itemDescription1, 500.0);
+        item2 = new Item(4, itemDescription2, 250.0);
         List <Item> items = sale.getItems();
+        testSale = new SaleDTO(dateAndTime, runningTotal, addedVAT, items);
 
+        
         sale.calculateCost(item1, 1.0, sale);
         sale.calculateCost(item2, 1.0, sale); 
 
