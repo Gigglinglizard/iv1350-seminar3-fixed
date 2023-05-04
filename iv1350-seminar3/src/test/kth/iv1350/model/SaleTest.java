@@ -30,7 +30,7 @@ public class SaleTest {
     private Printer printer; 
 
     @Test
-    public void testAddItem()  {
+    public void addItem()  {
         sale = new Sale();
         item1 = new Item(2, itemDescription1, 500.0);
         item2 = new Item(4, itemDescription2, 250.0);
@@ -47,7 +47,7 @@ public class SaleTest {
     }
 
     @Test
-    public void testCalculateCost() {
+    public void calculateCost() {
         sale = new Sale();
         item1 = new Item(2, itemDescription1, 500.0);
         item2 = new Item(4, itemDescription2, 250.0);
@@ -63,3 +63,8 @@ public class SaleTest {
         assertEquals(16.6, sale.getSaleInfo().getAddedVAT(), 0.001);
     }
 }
+
+
+
+
+    

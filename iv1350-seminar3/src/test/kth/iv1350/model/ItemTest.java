@@ -31,7 +31,7 @@ import org.junit.Test;
     }
 
     @Test
-    public void testGetItemDescription() {
+    public void getItemDescription() {
         name = "banan";
         price = 10.0;
         VAT = 0.06;
@@ -43,7 +43,7 @@ import org.junit.Test;
     }
 
     @Test
-    public void testGetItemIdentifier() {
+    public void getItemIdentifier() {
         name = "banan";
         price = 10.0;
         VAT = 0.06;
@@ -55,7 +55,7 @@ import org.junit.Test;
     }
 
     @Test
-    public void testGetQuantity() {
+    public void getQuantity() {
         name = "banan";
         price = 10.0;
         VAT = 0.06;
@@ -68,7 +68,7 @@ import org.junit.Test;
     }
 
     @Test
-    public void testGetStoreQuantity() {
+    public void getStoreQuantity() {
         name = "banan";
         price = 10.0;
         VAT = 0.06;
@@ -81,7 +81,7 @@ import org.junit.Test;
     }
 
     @Test
-    public void testSetQuantity() {
+    public void setQuantity() {
         name = "banan";
         price = 10.0;
         VAT = 0.06;
@@ -95,7 +95,7 @@ import org.junit.Test;
     }
 
     @Test
-    public void testSetStoreQuantity() {
+    public void setStoreQuantity() {
         name = "banan";
         price = 10.0;
         VAT = 0.06;
