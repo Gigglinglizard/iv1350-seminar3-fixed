@@ -50,6 +50,10 @@ public class SaleDTO {
         return this.addedVAT; 
     }
 
+    /**
+     * Creates a list to gather all of the requested items. 
+     * @return The list of requested items constantly updated throughout the sale.
+     */
     public List<Item> getItems(){
         return this.items;
     }

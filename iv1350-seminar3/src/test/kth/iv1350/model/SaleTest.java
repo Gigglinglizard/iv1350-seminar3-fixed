@@ -7,7 +7,9 @@ import se.kth.iv1350.integration.*;
 import se.kth.iv1350.model.*;
 import java.util.*;
 
-
+ /**
+ *This class tests the functionalities of the Sale class. 
+ */
 public class SaleTest {
     private Item item1;
     private Item item2; 
@@ -15,6 +17,9 @@ public class SaleTest {
     private ItemDescription itemDescription1;
     private ItemDescription itemDescription2;
 
+    /**
+    *Tests the functionality of adding items to a sale, simulating the items to be added into the item list.
+    */
     @Test
     public void addItem()  {
         sale = new Sale();
@@ -32,6 +37,9 @@ public class SaleTest {
         assertTrue(items.contains(item2));
     }
 
+    /**
+    *Tests the functionality of calculating the cost of a sale, simulating the method calls in the code using hard-coded items to replace the inventory.
+    */
     @Test
     public void calculateCost() {
         sale = new Sale();

@@ -8,24 +8,39 @@ public class Receipt {
     private Sale sale;
     private Payment payment;
    
+    /**
+    *Initialize the Receipt with a Sale and Payment objects
+    *@param sale Holds the sale information to be printed.
+    *@param payment Holds the information concerning payment method and amount to be returned.
+    */
     public Receipt(Sale sale, Payment payment){
-        // Initialize the Receipt with a Sale and Payment objects
+        
         this.sale = sale;
         this.payment = payment;
     }
 
-    // Utility method to append a line to the StringBuilder
+    /**
+     *  Utility method to append a line to the StringBuilder
+     * @param builder
+     * @param line 
+     */
     private void appendLine(StringBuilder builder, String line) {
         builder.append(line);
         builder.append("\n");
     }
 
-    // Utility method to end a section in the StringBuilder
+    /** 
+     * Utility method to end a section in the StringBuilder
+     * @param builder
+     */
     private void endSection(StringBuilder builder) {
         builder.append("\n");
     }
 
-    // Method that creates a receipt as a String
+    /**
+     * Method that creates a receipt as a String
+     * @return builder.toString() 
+     */
     public String createReceipt() {
         StringBuilder builder = new StringBuilder();
 

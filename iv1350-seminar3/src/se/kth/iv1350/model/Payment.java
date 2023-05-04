@@ -1,9 +1,9 @@
+package se.kth.iv1350.model;
+
 /**
   The Payment class represents a payment made by the customer during a sale.
   It contains information about the amount paid, the running total and the change returned.
  */
-package se.kth.iv1350.model;
-
 public class Payment {
     
     private double paidAmount; // The amount paid by the customer.

@@ -3,15 +3,18 @@ package se.kth.iv1350.integration;
 import java.util.*;
 import se.kth.iv1350.model.*;
 
-/**
-  An external inventory system that holds information about the items in the store.
- */
+
+  /**
+   * An external inventory system that holds information about the items in the store.
+   */
+ 
 public class ExternalInventory {
     private List<Item> storeItems = new ArrayList<>(); // a list of items in the store
 	private List<ItemDescription> itemDescriptions = new ArrayList<>(); // a list of descriptions of items
 
+    
     /**
-      Creates a new instance of ExternalInventory and adds items to the store.
+     * Creates a new instance of ExternalInventory and adds items to the store.
      */
     public ExternalInventory(){
         addItem(); // adds items to the store when a new instance is created
