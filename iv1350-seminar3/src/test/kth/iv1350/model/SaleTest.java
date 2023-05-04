@@ -35,10 +35,10 @@ public class SaleTest {
     @Test
     public void addItem()  {
         sale = new Sale();
-        item1 = new Item(2, itemDescription1, 500.0);
-        item2 = new Item(4, itemDescription2, 250.0);
         itemDescription1 = new ItemDescription("Dragon Fruit", 40.0, 0.25);
         itemDescription2 = new ItemDescription("Canned Beans", 55.0, 0.12);
+        item1 = new Item(2, itemDescription1, 500.0);
+        item2 = new Item(4, itemDescription2, 250.0);
         
         sale.addItem(item1);
         sale.addItem(item2);
