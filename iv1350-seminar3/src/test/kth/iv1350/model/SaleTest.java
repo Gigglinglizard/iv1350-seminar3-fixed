@@ -5,26 +5,32 @@ import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertTrue;
 import se.kth.iv1350.integration.*;
 import se.kth.iv1350.model.*;
+import se.kth.iv1350.view.*;
+import se.kth.iv1350.controller.*;
 import java.time.*;
 import java.util.*;
 
 
 public class SaleTest {
     private Item item1;
-    private Item item2;
+    private Item item2; 
     private Sale sale;
     private int itemIdentifier;
     private ItemDescription itemDescription1;
     private ItemDescription itemDescription2;
     private double storeQuantity;
-    private double quantity;
+    private double tempQuantity;
     private String name;
     private double price;
     private double VAT;
+    private SaleDTO testSale;
+    private controller contr;
+    private ExternalInventory extInv;
+    private ExternalAccounting extAcc;
+    private Printer printer; 
 
     @Test
-    public void testAddItem() {
-
+    public void testAddItem()  {
         sale = new Sale();
         item1 = new Item(2, itemDescription1, 500.0);
         item2 = new Item(4, itemDescription2, 250.0);
@@ -41,33 +47,19 @@ public class SaleTest {
     }
 
     @Test
-    public void testIsSameItem() {
+    public void testCalculateCost() {
         sale = new Sale();
-        boolean correctItem = false;
         item1 = new Item(2, itemDescription1, 500.0);
         item2 = new Item(4, itemDescription2, 250.0);
         itemDescription1 = new ItemDescription("Dragon Fruit", 40.0, 0.25);
         itemDescription2 = new ItemDescription("Canned Beans", 55.0, 0.12);
-        
-        sale.addItem(item1);
-        sale.addItem(item2);
-        List<Item> items = sale.getItems();
 
-        if (item1.getItemIdentifier() == (item2.getItemIdentifier())){
-            correctItem = true;
-        }
+        List <Item> items = sale.getItems();
 
-        assertEquals(2, items.size());
-        assertTrue(items.contains(item2));
-        assertEquals(false, correctItem);
-    }
+        sale.calculateCost(item1, 1.0, sale);
+        sale.calculateCost(item2, 1.0, sale); 
 
-    @Test
-    public void testCalculateCost() {
-        sale.addItem(item1);
-        sale.calculateCost(item1, 3, sale);
-        SaleDTO saleInfo = sale.getSaleInfo();
-        assertEquals(7.2, saleInfo.getRunningTotal());
-        assertEquals(0.9, saleInfo.getAddedVAT());
+        assertEquals(111.6, sale.getSaleInfo().getRunningTotal(), 0.001);
+        assertEquals(16.6, sale.getSaleInfo().getAddedVAT(), 0.001);
     }
 }

@@ -5,6 +5,13 @@
     "version": "0.2.0",
     "configurations": [
         {
+            "type": "java",
+            "name": "startup",
+            "request": "launch",
+            "mainClass": "se.kth.iv1350.startup.startup",
+            "projectName": "iv1350-seminar3_c2e3d49d"
+        },
+        {
             "name": "Java",
             "type": "java",
             "request": "launch",
