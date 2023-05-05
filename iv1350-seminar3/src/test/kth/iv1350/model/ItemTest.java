@@ -18,9 +18,9 @@ public class ItemTest {
     private double price;
     private double VAT;
 
-    // Test setup method
+    
     public void setUp() {
-        // Set up the item's properties
+        
         name = "banan";
         price = 10.0;
         VAT = 0.06;
@@ -37,7 +37,7 @@ public class ItemTest {
      */ 
     @Test
     public void getItemDescription() {
-        // Set up the item's properties
+        
         name = "banan";
         price = 10.0;
         VAT = 0.06;
@@ -45,7 +45,7 @@ public class ItemTest {
         storeQuantity = 500.0;
         itemDescription = new ItemDescription(name, price, VAT);
         item = new Item(itemIdentifier, itemDescription, storeQuantity);
-        // Test if the item's description is equal to the expected value
+        
         assertEquals(itemDescription, item.getItemDescription());
     }
 
@@ -55,7 +55,7 @@ public class ItemTest {
      */ 
     @Test
     public void getItemIdentifier() {
-        // Set up the item's properties
+        
         name = "banan";
         price = 10.0;
         VAT = 0.06;
@@ -63,7 +63,7 @@ public class ItemTest {
         storeQuantity = 500.0;
         itemDescription = new ItemDescription(name, price, VAT);
         item = new Item(itemIdentifier, itemDescription, storeQuantity);
-        // Test if the item's identifier is equal to the expected value
+        
         assertEquals(itemIdentifier, item.getItemIdentifier());
     }
 
@@ -73,7 +73,7 @@ public class ItemTest {
      */ 
     @Test
     public void getQuantity() {
-        // Set up the item's properties
+        
         name = "banan";
         price = 10.0;
         VAT = 0.06;
@@ -82,7 +82,7 @@ public class ItemTest {
         quantity = 10.0;
         itemDescription = new ItemDescription(name, price, VAT);
         item = new Item(itemIdentifier, itemDescription, storeQuantity); 
-        // Test if the item's quantity is equal to the expected value
+        
         assertEquals(0.0, item.getQuantity(), 0.001); 
     }
 
@@ -92,7 +92,7 @@ public class ItemTest {
      */ 
     @Test
     public void getStoreQuantity() {
-        // Set up the item's properties
+        
         name = "banan";
         price = 10.0;
         VAT = 0.06;
@@ -101,7 +101,7 @@ public class ItemTest {
         quantity = 10.0;
         itemDescription = new ItemDescription(name, price, VAT);
         item = new Item(itemIdentifier, itemDescription, storeQuantity); 
-        // Test if the item's store quantity is equal to the expected value
+        
         assertEquals(500.0, item.getStoreQuantity(), 0.001);
     }
 
